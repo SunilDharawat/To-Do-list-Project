@@ -1,0 +1,41 @@
+const toDoItem = document.getElementsByClassName("to-do-items")[0];
+const input = document.getElementById("input");
+const trashIcon = document.getElementById("trash");
+
+// make a eventlistener for show the previous items on the search baar
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter")
+    //press enter and show the last details
+    addItem();
+});
+
+// make a function for add items
+function addItem() {
+  var divParent = document.createElement("div");
+  var divChild = document.createElement("div");
+  var checkIcon = document.createElement("i");
+  var trashIcon = document.createElement("i");
+
+  divParent.className = "item";
+  divChild.innerHTML = `<div>` + input.value + `</div>`;
+
+  checkIcon.className = "fas fa-check-square";
+  checkIcon.style.color = "lightgray";
+  checkIcon.addEventListener("click", function () {
+    checkIcon.style.color = "limegreen";
+  });
+  divChild.appendChild(checkIcon);
+
+  trashIcon.className = "fas fa-trash";
+  trashIcon.style.color = "darkgray";
+  trashIcon.addEventListener("click", function () {
+    divParent.remove();
+  });
+
+  divChild.appendChild(trashIcon);
+  divParent.appendChild(divChild);
+
+  toDoItem.appendChild(divParent);
+  input.value = "";
+}

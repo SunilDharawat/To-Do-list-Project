@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="list.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Make a container for nav-bar icon -->
+    <div class="container">
+      <div class="nav">
+        <h2><i class="fa-solid fa-square-check"></i>To-Do List</h2>
+        <div class="user-input">
+          <!-- Create a function for sumbit to-do list items -->
+          <input
+            id="input"
+            type="text"
+            placeholder="Write your task..."
+          /><button onclick="addItem()">Sumbit</button>
+        </div>
+      </div>
+    </div>
+    <!-- To-do Ites list -->
+    <div class="container">
+      <h2 class="list-item">List of Tasks</h2>
+      <div class="to-do-items"></div>
+    </div>
+
+    <div class="container">
+      <h2 class="about">About :- To-do List Project</h2>
+      <p>
+        This is basically used for daily taks to remebar that taks as list of
+        the day. <br />
+        In this project you add your task and after complete tasks,<br />
+        you can fill the symbol check in and also delete the task.
+      </p>
+      <img src="1669544772128-modified.png" alt="Sunil's_img" />
+      <h2 class="about-person">Mr_dharawat_ji</h2>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
